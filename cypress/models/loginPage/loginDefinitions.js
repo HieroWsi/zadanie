@@ -1,9 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from "../Pages/loginPage";
+import LoginPage from "./loginPage";
 
 const login = new LoginPage();
 
-Given("I navigate to the Website", () => {
+Given("I navigate to the login page", () => {
   cy.visit("/");
 });
 
@@ -15,8 +15,8 @@ When("I entered username {string}", username => {
     login.typeUsername(username);
 });
 
-When("I entered password {string}", password => {
-  login.typePassword(password);
+When("I entered login password {string}", password => {
+  login.typeLoginPassword(password);
 });
 
 When("Login as user", () => {

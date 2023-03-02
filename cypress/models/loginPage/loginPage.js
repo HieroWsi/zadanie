@@ -1,7 +1,3 @@
-const pageElements = {
-    bodyText: 'Welcome back, jan.testowy@wskz.pl!'
-}
-
 export default class LoginPage {
   selectors = {
     usernameInput: '#username',
@@ -13,7 +9,7 @@ export default class LoginPage {
     cy.get(this.selectors.usernameInput).should("be.visible").type(username);
   }
 
-  typePassword(password) {
+  typeLoginPassword(password) {
     cy.get(this.selectors.passwordInput).should("be.visible").type(password);
   }
 

@@ -22,6 +22,6 @@
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/definitions/*.{js,ts}"
+    "stepDefinitions": "cypress/models/**/*.{js,ts}"
   }
 }
