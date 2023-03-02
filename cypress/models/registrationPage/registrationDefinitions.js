@@ -1,29 +1,29 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import registrationPage from "./registrationPage";
+import RegistrationPage from "./registrationPage";
 
-const registration = new registrationPage();
+const registration = new RegistrationPage();
 
 Given("I navigate to the registration page", () => {
   cy.visit("/registration");
 });
 
-When("I entered email address {string}", emailAdress => {
+When("I entered email address {string}", (emailAdress) => {
   registration.typeEmailAdress(emailAdress);
 });
 
-When("I entered password {string}", password => {
+When("I entered password {string}", (password) => {
   registration.typePassword(password);
 });
 
-When("I selected hobby {string}", hobby => {
+When("I selected hobby {string}", (hobby) => {
   registration.selectHobby(hobby);
 });
 
-When("I choosen file {string}", fileName => {
+When("I choosen file {string}", (fileName) => {
   registration.chooseFile(fileName);
 });
 
-When("I checked conditions {string}", conditionIndex => {
+When("I checked conditions {string}", (conditionIndex) => {
   registration.checkConditions(conditionIndex);
 });
 

@@ -11,17 +11,17 @@ When("User click on sign in button", () => {
   login.clickSignInButton();
 });
 
-When("I entered username {string}", username => {
-    login.typeUsername(username);
+When("I entered username {string}", (username) => {
+  login.typeUsername(username);
 });
 
-When("I entered login password {string}", password => {
+When("I entered login password {string}", (password) => {
   login.typeLoginPassword(password);
 });
 
 When("Login as user", () => {
   login.signIn();
-  cy.url().should('include', '/home')
+  cy.url().should("include", "/home");
 });
 
 Then("Validate the title after login {string}", (title) => {
@@ -29,5 +29,5 @@ Then("Validate the title after login {string}", (title) => {
 });
 
 Then("Error message should display {string}", (errorMessage) => {
-    login.validateErrorMessage(errorMessage);
+  login.validateErrorMessage(errorMessage);
 });

@@ -1,7 +1,7 @@
 export default class LoginPage {
   selectors = {
-    usernameInput: '#username',
-    passwordInput: '#password',
+    usernameInput: "#username",
+    passwordInput: "#password",
     loginButton: '[value="Login"]',
   };
 
@@ -23,11 +23,11 @@ export default class LoginPage {
     this.clickSignInButton();
   }
 
-  verifyPageTitle(title){
-    cy.get('body').should('be.visible').and('have.text', title)
+  verifyPageTitle(title) {
+    cy.get("body").should("be.visible").and("have.text", title);
   }
 
-  validateErrorMessage(message){
-    cy.get('body').should('be.visible').and('have.text', message)
+  validateErrorMessage(message) {
+    cy.get("body").should("be.visible").and("have.text", message);
   }
 }
