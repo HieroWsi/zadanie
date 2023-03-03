@@ -34,7 +34,7 @@ module.exports = defineConfig({
       await addCucumberPreprocessorPlugin(on, config);
       return config;
     },
-    specPattern: "cypress/e2e/*.feature",
+    specPattern: "cypress/e2e/**/*.{feature,js}",
     supportFile: "cypress/support/e2e.js",
     baseUrl: "http://localhost:3000"
   },
