@@ -9,8 +9,8 @@
   "scripts": {
     "start:app": "node app.js",
     "cy:open": "npx cypress open",
-    "cy:test": "npx cypress run",
-    "start:ci": "start-server-and-test start:app http://localhost:3000 cy:test"
+    "cy:e2e:chrome": "npx cypress run  --spec 'cypress/e2e/**' --browser chrome",
+    "start:ci": "start-server-and-test start:app http://localhost:3000 cy:e2e:chrome"
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -18,6 +18,14 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   e2e: {
     async setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        console.log(launchOptions.args)
+        if (browser.name == 'chrome') {
+          launchOptions.args.push('--disable-gpu')
+        }
+        return launchOptions
+      });
+
       const bundler = createBundler({
         plugins: [nodePolyfills(), createEsbuildPlugin(config)],
       });
