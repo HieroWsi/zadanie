@@ -5,7 +5,7 @@ const nodePolyfills = require("@esbuild-plugins/node-modules-polyfill").NodeModu
 const {createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 10000,
+  defaultCommandTimeout: 15000,
   execTimeout: 10000,
   requestTimeout: 5000,
   defalutTimeout: 5000,
@@ -15,6 +15,7 @@ module.exports = defineConfig({
   retries: 0,
   video: false,
   videoUploadOnPasses: false,
+  chromeWebSecurity: false,
   e2e: {
     async setupNodeEvents(on, config) {
       const bundler = createBundler({

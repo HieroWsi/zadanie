@@ -9,7 +9,7 @@
   "scripts": {
     "app:run": "node app.js",
     "cy:open": "npx cypress open",
-    "cy:test": "npx cypress test"
+    "cy:test": "npx cypress run"
   },
   "dependencies": {
     "express": "^4.18.2",
