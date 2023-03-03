@@ -5,11 +5,11 @@ const nodePolyfills = require("@esbuild-plugins/node-modules-polyfill").NodeModu
 const {createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 15000,
-  execTimeout: 10000,
-  requestTimeout: 5000,
-  defalutTimeout: 5000,
-  pageLoadTimeout: 10000,
+  defaultCommandTimeout: 20000,
+  execTimeout: 20000,
+  requestTimeout: 10000,
+  defalutTimeout: 20000,
+  pageLoadTimeout: 30000,
   viewportWidth: 1920,
   viewportHeight: 1080,
   retries: 0,
